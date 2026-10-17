@@ -267,8 +267,8 @@ app.get('/ticket-notes', async (req, res) => {
      }
 });
 
-//GET /ticket-notes/: ticketId - return notes for specific ticket 
-app.get('ticket-notes/:ticketId', async (req, res) => {
+//GET /ticket-notes/:id ticketId - return notes for specific ticket 
+app.get('/ticket-notes/:ticketId', async (req, res) => {
     try {
         const ticketId = parseInt(req.params.ticketId);
         const mongoDb = getMongo();
